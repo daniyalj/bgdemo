@@ -90,7 +90,7 @@
         <div class="col-md-6 col-md-offset-3">
           <h2>Application Example</h2>
           <p>
-            <img src="https://cloud.githubusercontent.com/assets/13129393/24668479/07afa97c-1935-11e7-9b6f-9f9964117979.png" alt="ms">
+            <img src="https://cloud.githubusercontent.com/assets/13129393/24910591/3ab20d40-1e96-11e7-9a1a-5e2a85c76a3e.jpg" alt="ms">
           </p>
         </div>
       </div>
