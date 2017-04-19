@@ -102,6 +102,7 @@
     <script>
       // Initialize Datatables
       $(document).ready( function() {
+        
         $('.datatable').dataTable();
       });
     </script>
