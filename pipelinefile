@@ -1,0 +1,12 @@
+node('maven') {
+stage 'buildInDevelopment'
+openshiftBuild(namespace: 'pipedev', buildConfig: 'myapp', showBuildLogs: 'true')
+stage 'deployInDevelopment'
+openshiftDeploy(namespace: 'pipedev', deploymentConfig: 'myapp')
+openshiftScale(namespace: 'pipedev', deploymentConfig: 'myapp',replicaCount: '2')
+stage 'deployInTesting'
+input message: "Promote to Testing?", ok: "Promote"
+openshiftTag(namespace: 'pipedev', sourceStream: 'myapp',  sourceTag: 'latest', destinationStream: 'myapp', destinationTag: 'promoteToQA')
+openshiftDeploy(namespace: 'pipetest', deploymentConfig: 'myapp', )
+openshiftScale(namespace: 'pipetest', deploymentConfig: 'myapp',replicaCount: '3')
+}
