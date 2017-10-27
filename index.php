@@ -90,7 +90,7 @@
         <div class="col-md-6 col-md-offset-3">
           <h2>Application Example</h2>
           <p>
-            <img src="makecondos.gif">
+            <img src="greenrose.jpeg">
           </p>
         </div>
       </div>
